@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Carre_1 = require("./Carre");
+const Side_1 = require("./Side");
+const Vertice_1 = require("./Vertice");
+let vert1 = new Vertice_1.Vertice(-100, -100);
+let vert2 = new Vertice_1.Vertice(-100, 100);
+let vert3 = new Vertice_1.Vertice(100, 100);
+let vert4 = new Vertice_1.Vertice(100, -100);
+let side1 = new Side_1.Side(vert1, vert2);
+let side2 = new Side_1.Side(vert2, vert3);
+let side3 = new Side_1.Side(vert3, vert4);
+let side4 = new Side_1.Side(vert4, vert1);
+let c1 = new Carre_1.Carre(new Array(side1, side2, side3, side4));
+console.log("Perimetre du carré: " + c1.perimeter());
+console.log("Aire du carré: " + c1.area());
